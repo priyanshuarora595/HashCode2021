@@ -1,16 +1,16 @@
 def out_write(lst):
     for k in range(len(lst)):
         if len(lst[k])>0:
-            out.write("\n")
-            out.write(str(k+2)+' ')
+            # out.write("\n")
             for i in lst[k]:
+                out.write(str(k+2)+' ')
                 for j in i:
                     out.write(str(j)+' ')
+                out.write("\n")
 
-inp=input("please enter name of the file(the file must be in the same directory) = ")
-f=open(inp,'r')
-open("output.txt","w").close()
-out=open("output.txt",'a')
+f=open("e_many_teams.in",'r')
+open("e_many_teams.out","w").close()
+out=open("e_many_teams.out",'a')
 
 l=[]
 base=[]
@@ -152,4 +152,5 @@ count=(len(t2)+len(t3)+len(t4))
 
 output=[t2,t3,t4]
 out.write(str(count))
+out.write("\n")
 out_write(output)
